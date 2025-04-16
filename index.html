@@ -48,51 +48,52 @@
 
 
 
-        /* Toolbar styles */
-        #toolbar {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding: 10px;
-            background-color: #eeeeee;
-            border-right: 1px solid #ccc;
-            width: 150px;
-            box-sizing: border-box;
-        }
+    /* Toolbar styles */
+    #toolbar {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        background-color: #eeeeee;
+        border-right: 1px solid #ccc;
+        width: 150px;
+        box-sizing: border-box;
+    }
+    
+    /* Editor styles */
+    #editor {
+        flex: 6; /* Increased flex for more width */
+        padding: 15px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        font-family: monospace;
+        background-color: #ffffff;
+        border-right: 1px solid #ccc;
+        height: 98vh;
+        box-sizing: border-box;
+        resize: none;
+    }
+    
+    /* Render container and wrapper styles */
+    #render-container {
+        flex: 3; /* Adjusted flex to balance space */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    
+    #render-wrapper {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
         
-        /* Editor styles */
-        #editor {
-            flex: 6; /* Increased flex for more width */
-            padding: 15px;
-            white-space: pre-wrap;
-            overflow-wrap: break-word;
-            font-family: monospace;
-            background-color: #ffffff;
-            border-right: 1px solid #ccc;
-            height: 100vh;
-            box-sizing: border-box;
-            resize: none;
-        }
-        
-        /* Render container and wrapper styles */
-        #render-container {
-            flex: 3; /* Adjusted flex to balance space */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        
-        #render-wrapper {
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-        
-        #render {
+    #render {
         width: 100%; /* Make render fill the available space */
         min-width: 540px;
         max-width: 540px; /* Add a max width for readability */
+        height: 95vh;
         padding: 20px;
         background-color: #fff9e5;
         font-family: 'Noto Sans', Arial, sans-serif; /*  Revert to normal font */
@@ -100,16 +101,16 @@
         word-wrap: break-word;
         line-height: 1.2;
         overflow-x: auto; /*  Prevents cut-off */
-        overflow-y: auto;
+        overflow-y: scroll;
 
         box-sizing: border-box;
         border-radius: 40px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         border: 1px solid #ddd;
         color: #000;
-}
+    }
 
-            #color-picker {
+    #color-picker {
         position: absolute;
         top: 100px; /* Adjust as needed */
         left: 200px; /* Adjust as needed */
@@ -126,21 +127,21 @@
         overflow-y: auto; /* Scrollable if needed */
     }
 
-        .color-box {
-            width: 30px;
-            height: 30px;
-            cursor: pointer;
-            border: 1px solid #aaa;
-            border-radius: 5px; /* Rounded corners for a modern look */
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .color-box:hover {
-            transform: scale(1.1); /* Enlarge slightly on hover */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-        }
-        
-        .bold {
+    .color-box {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        border: 1px solid #aaa;
+        border-radius: 5px; /* Rounded corners for a modern look */
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .color-box:hover {
+        transform: scale(1.1); /* Enlarge slightly on hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    }
+    
+    .bold {
         font-weight: bold;
     }
 
